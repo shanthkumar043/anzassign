@@ -1,0 +1,45 @@
+{
+    "name": "testcafe-cucumber",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "cucumber-js",
+        "test-chromeemulator": "cucumber-js --tags @OXYIPAD --world-parameters \"{\\\"browser\\\": \\\"chrome:emulation:device=Ipad\\\"}\"",
+        "test-chromelocal": "cucumber-js  --world-parameters \"{\\\"browser\\\": \\\"chrome:userProfile\\\"}\"",
+        "test-Chrome-OXYRES": "cucumber-js --tags @OXYRESBOOKING --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+        "test-Chrome-OXYAIR": "cucumber-js --tags @OXYAIR --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+        "test-chromeincognito": "cucumber-js  --world-parameters \"{\\\"browser\\\": \\\"chrome -incognito\\\"}\"",
+        "test-chrome": "cucumber-js  --world-parameters \"{\\\"browser\\\": \\\"chrome -incognito\\\"}\"",
+        "test-edge": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"edge\\\"}\"",
+        "test-firefox": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"firefox\\\"}\"",
+        "test-opera": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"opera\\\"}\"",
+        "test-safari": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\"",
+        "test-chrome-report": "./node_modules/.bin/cucumber-js.cmd --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+        "test-chrome-htmlreport": "./node_modules/.bin/cucumber-js.cmd --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome:\\\"}\"--reporter-app-name='My App' --reporter-app-version='x.y.z'\\",
+        "test-ie-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\"",
+        "test-edge-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"edge\\\"}\"",
+        "test-firefox-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"firefox\\\"}\"",
+        "test-opera-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"opera\\\"}\"",
+        "test-safari-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\"",
+        "test-chrome-headless": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
+        "test-firefox-headless": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"firefox:headless\\\"}\""
+    },
+    "keywords": [],
+    "author": "daniel velazco",
+    "license": "ISC",
+    "dependencies": {
+        "@ffmpeg-installer/ffmpeg": "^1.0.20",
+        "cafe": "0.0.6",
+        "cucumber": "^5.1.0",
+        "test": "^0.6.0",
+        "testcafe": "^1.9.2",
+        "testcafe-reporter-cucumber-json": "^2.0.1",
+        "testcafe-reporter-html-testrail": "^3.1.3",
+        "testcafe-reporter-slack": "0.0.6"
+    },
+    "devDependencies": {
+        "multiple-cucumber-html-reporter": "^1.13.1"
+    },
+    "report": "node report-generator.js"
+}
